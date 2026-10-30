@@ -11,7 +11,6 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap"
         rel="stylesheet">
 
@@ -33,7 +32,7 @@
 
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 110px;
+      scroll-padding-top: 150px;
     }
 
     body {
@@ -57,8 +56,8 @@
       top: 0;
       z-index: 100;
       background: var(--navy);
-      border-bottom: 1px solid rgba(250, 248, 245, 0.15);
-      box-shadow: 0 3px 12px rgba(31, 42, 68, 0.08);
+      border-bottom: 1px solid rgba(250,248,245,0.15);
+      box-shadow: 0 3px 12px rgba(31,42,68,0.08);
     }
 
     nav {
@@ -66,7 +65,7 @@
       justify-content: space-between;
       align-items: center;
       min-height: 82px;
-      gap: 25px;
+      gap: 20px;
     }
 
     .brand {
@@ -75,6 +74,7 @@
       font-weight: 600;
       color: var(--ivory);
       text-decoration: none;
+      white-space: nowrap;
       transition: color 0.25s ease;
     }
 
@@ -82,17 +82,24 @@
       color: var(--hover);
     }
 
+    .nav-right {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
     .nav-links {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      gap: 22px;
+      gap: 18px;
     }
 
     .nav-links a {
-      display: inline-block;
       position: relative;
-      font-size: 14px;
+      display: inline-block;
+      font-size: 13px;
       font-weight: 500;
       color: var(--ivory);
       text-decoration: none;
@@ -111,7 +118,6 @@
       height: 2px;
       background: var(--hover);
       transform: scaleX(0);
-      transform-origin: center;
       transition: transform 0.25s ease;
     }
 
@@ -125,26 +131,63 @@
       transform: scaleX(1);
     }
 
-    .nav-links a:focus-visible,
-    .brand:focus-visible {
+    /* LANGUAGE SELECTOR */
+
+    .language-selector {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding-left: 14px;
+      border-left: 1px solid rgba(250,248,245,0.3);
+      color: var(--ivory);
+    }
+
+    .language-selector svg {
+      width: 17px;
+      height: 17px;
+      flex-shrink: 0;
+    }
+
+    .language-selector select {
+      background: var(--navy);
+      color: var(--ivory);
+      border: none;
+      font-family: "DM Sans", sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      padding: 6px 2px;
+    }
+
+    .language-selector select:hover {
+      color: var(--hover);
+    }
+
+    .language-selector select option {
+      color: var(--ivory);
+      background: var(--navy);
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    select:focus-visible {
       outline: 2px solid var(--hover);
       outline-offset: 4px;
-      border-radius: 3px;
     }
 
     /* PROFILE SECTION */
 
     .profile {
       display: grid;
-      grid-template-columns: 220px minmax(0, 1fr);
+      grid-template-columns: 190px minmax(0, 1fr);
       align-items: center;
-      gap: 65px;
-      padding: 85px 0;
-      scroll-margin-top: 110px;
+      gap: 55px;
+      padding: 80px 0;
+      scroll-margin-top: 150px;
     }
 
     .profile-photo {
-      width: 220px;
+      width: 190px;
       max-width: 100%;
     }
 
@@ -153,7 +196,7 @@
       width: 100%;
       height: auto;
       border-radius: 10px;
-      box-shadow: 0 12px 30px rgba(31, 42, 68, 0.08);
+      box-shadow: 0 12px 30px rgba(31,42,68,0.08);
     }
 
     .profile-info {
@@ -198,7 +241,7 @@
     section {
       padding: 65px 0;
       border-top: 1px solid var(--border);
-      scroll-margin-top: 110px;
+      scroll-margin-top: 150px;
     }
 
     h2 {
@@ -207,9 +250,20 @@
       margin: 0 0 22px;
     }
 
-    .section-text {
-      max-width: 760px;
+    /* BIOGRAPHY */
+
+    .biography-text {
+      max-width: 780px;
+    }
+
+    .biography-text p {
+      margin: 0 0 20px;
       font-size: 16px;
+      line-height: 1.85;
+    }
+
+    .biography-text p:last-child {
+      margin-bottom: 0;
     }
 
     /* EDUCATION */
@@ -247,8 +301,61 @@
 
     /* PROJECTS */
 
-    .project-note {
-      max-width: 760px;
+    .project-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      padding: 32px;
+      margin-top: 28px;
+    }
+
+    .project-label {
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+
+    .project-card h3 {
+      font-size: 25px;
+      font-weight: 500;
+      margin: 0 0 20px;
+    }
+
+    .project-card p:not(.project-label) {
+      font-size: 15px;
+      margin: 0 0 18px;
+      line-height: 1.85;
+    }
+
+    .project-card p:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 26px;
+    }
+
+    .project-tags span {
+      border: 1px solid var(--border);
+      background: var(--background);
+      border-radius: 20px;
+      padding: 5px 12px;
+      font-size: 12px;
+      color: var(--navy);
+      font-weight: 500;
+    }
+
+    /* CV */
+
+    .cv-note {
+      color: var(--text);
+      font-size: 16px;
     }
 
     /* SOCIAL ICONS */
@@ -280,11 +387,6 @@
       transform: translateY(-2px);
     }
 
-    .social-links a:focus-visible {
-      outline: 3px solid var(--accent);
-      outline-offset: 4px;
-    }
-
     .social-links svg {
       width: 30px;
       height: 30px;
@@ -300,7 +402,7 @@
 
     footer {
       background: var(--navy);
-      border-top: 1px solid rgba(250, 248, 245, 0.15);
+      border-top: 1px solid rgba(250,248,245,0.15);
       text-align: center;
       padding: 35px 20px;
       font-size: 13px;
@@ -322,13 +424,11 @@
 
       width: 48px;
       height: 48px;
-
       background: var(--navy);
       color: var(--ivory);
-      border: 1px solid rgba(250, 248, 245, 0.15);
+      border: 1px solid rgba(250,248,245,0.15);
       border-radius: 10px;
-
-      box-shadow: 0 5px 18px rgba(31, 42, 68, 0.2);
+      box-shadow: 0 5px 18px rgba(31,42,68,0.2);
       cursor: pointer;
 
       opacity: 0;
@@ -353,11 +453,6 @@
       transform: translateY(-4px);
     }
 
-    .back-to-top:focus-visible {
-      outline: 3px solid var(--accent);
-      outline-offset: 4px;
-    }
-
     .back-to-top svg {
       width: 24px;
       height: 24px;
@@ -365,53 +460,62 @@
 
     /* TABLET */
 
-    @media (max-width: 800px) {
+    @media (max-width: 900px) {
       nav {
         flex-direction: column;
         align-items: flex-start;
-        gap: 12px;
-        padding: 20px 0;
+        gap: 10px;
+        padding: 16px 0;
+      }
+
+      .nav-right {
+        width: 100%;
+        justify-content: space-between;
       }
 
       .profile {
         gap: 35px;
-      }
-
-      html {
-        scroll-padding-top: 155px;
-      }
-
-      section,
-      .profile {
-        scroll-margin-top: 155px;
       }
     }
 
     /* SMARTPHONE */
 
     @media (max-width: 600px) {
+      .container {
+        padding: 0 20px;
+      }
+
+      .nav-right {
+        align-items: flex-start;
+        gap: 12px;
+      }
+
+      .nav-links {
+        gap: 6px 14px;
+      }
+
+      .nav-links a {
+        font-size: 12px;
+      }
+
+      .language-selector {
+        padding-left: 8px;
+      }
+
       .profile {
         grid-template-columns: 1fr;
         gap: 30px;
-        padding: 60px 0;
+        padding: 55px 0;
       }
 
       .profile-photo {
-        width: 220px;
+        width: 190px;
         max-width: 100%;
         margin: 0 auto;
       }
 
       .profile-info {
         text-align: center;
-      }
-
-      .nav-links {
-        gap: 12px 16px;
-      }
-
-      .nav-links a {
-        font-size: 13px;
       }
 
       section {
@@ -424,6 +528,14 @@
 
       h2 {
         font-size: 30px;
+      }
+
+      .project-card {
+        padding: 22px;
+      }
+
+      .project-card h3 {
+        font-size: 22px;
       }
 
       .back-to-top {
@@ -464,14 +576,45 @@
           Suziane Silva Queiroz
         </a>
 
-        <div class="nav-links">
-          <a href="#home">Home</a>
-          <a href="#biography">Biography</a>
-          <a href="#education">Education</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
-        </div>
+        <div class="nav-right">
 
+          <div class="nav-links">
+            <a href="#home" data-i18n="home">Home</a>
+            <a href="#biography" data-i18n="biography">Biography</a>
+            <a href="#education" data-i18n="education">Education</a>
+            <a href="#projects" data-i18n="projects">Projects</a>
+            <a href="#cv">CV</a>
+            <a href="#contact" data-i18n="contact">Contact</a>
+          </div>
+
+          <!-- LANGUAGE SELECTOR -->
+
+          <div class="language-selector">
+
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="1.8"
+                 stroke-linecap="round"
+                 stroke-linejoin="round"
+                 aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M2 12h20"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10"/>
+              <path d="M12 2a15.3 15.3 0 0 0-4 10 15.3 15.3 0 0 0 4 10"/>
+            </svg>
+
+            <select id="languageSelect"
+                    aria-label="Choose website language">
+              <option value="en" selected>EN</option>
+              <option value="it">IT</option>
+              <option value="pt">PT</option>
+            </select>
+
+          </div>
+
+        </div>
       </nav>
     </div>
   </header>
@@ -486,13 +629,13 @@
         <img
           src="profile.jpeg"
           alt="Portrait of Suziane Silva Queiroz"
-          width="220"
-          height="293">
+          width="190"
+          height="253">
       </div>
 
       <div class="profile-info">
 
-        <p class="eyebrow">
+        <p class="eyebrow" data-i18n="portfolioLabel">
           Personal Website & Portfolio
         </p>
 
@@ -512,27 +655,54 @@
     <!-- BIOGRAPHY -->
 
     <section id="biography">
-      <h2>Biography</h2>
+      <h2 data-i18n="biography">Biography</h2>
 
-      <p class="section-text">
-        Welcome to my personal website and portfolio.
-        My interests include computer engineering,
-        cybersecurity, artificial intelligence
-        and software development.
-        This website is a space to share my background,
-        projects and professional development.
-      </p>
+      <div class="biography-text">
+
+        <p data-i18n="bioWelcome">
+          Welcome to my personal website and portfolio.
+        </p>
+
+        <p data-i18n="bioP1">
+          I am currently pursuing an MSc in Computer Engineering,
+          Cybersecurity and Artificial Intelligence at the
+          University of Cagliari, where the programme is taught
+          entirely in English.
+        </p>
+
+        <p data-i18n="bioP2">
+          I hold a BSc in Electronic, Computer and
+          Telecommunication Engineering from the same university,
+          with a focus on Computer Science. My academic background
+          has provided me with a foundation in computer networks,
+          programming and digital systems.
+        </p>
+
+        <p data-i18n="bioP3">
+          I am particularly interested in network security,
+          artificial intelligence and the intersection between
+          AI and cybersecurity. I enjoy exploring how technology
+          can be applied to real-world challenges.
+        </p>
+
+        <p data-i18n="bioP4">
+          Alongside my academic journey, I continue to develop
+          my technical skills and explore new areas of
+          computer engineering.
+        </p>
+
+      </div>
     </section>
 
     <!-- EDUCATION -->
 
     <section id="education">
-      <h2>Education</h2>
+      <h2 data-i18n="education">Education</h2>
 
       <div class="education-list">
 
         <div class="education-item">
-          <h3>Master's Degree</h3>
+          <h3 data-i18n="masters">Master's Degree</h3>
 
           <p>
             Computer Engineering, Cybersecurity and Artificial Intelligence
@@ -540,13 +710,13 @@
             University of Cagliari
           </p>
 
-          <div class="education-status">
+          <div class="education-status" data-i18n="inProgress">
             In progress
           </div>
         </div>
 
         <div class="education-item">
-          <h3>Bachelor's Degree</h3>
+          <h3 data-i18n="bachelors">Bachelor's Degree</h3>
 
           <p>
             Electronic, Computer and Telecommunication Engineering
@@ -554,7 +724,7 @@
             University of Cagliari
           </p>
 
-          <div class="education-status">
+          <div class="education-status" data-i18n="completed">
             Completed in 2026
           </div>
         </div>
@@ -565,22 +735,73 @@
     <!-- PROJECTS -->
 
     <section id="projects">
-      <h2>Projects</h2>
+      <h2 data-i18n="projects">Projects</h2>
 
-      <p class="project-note">
-        A selection of personal and technical projects
-        will be added as my portfolio develops.
+      <article class="project-card">
+
+        <p class="project-label" data-i18n="thesisLabel">
+          Bachelor's Thesis · 2026
+        </p>
+
+        <h3>
+          From On-Premises Databases to the Cloud:
+          A Comparative Analysis with AWS Services
+        </h3>
+
+        <p data-i18n="projectP1">
+          Bachelor's thesis comparing traditional on-premises
+          database management with cloud-based solutions on
+          Amazon Web Services (AWS).
+        </p>
+
+        <p data-i18n="projectP2">
+          The work compares the two models in terms of control,
+          costs (CapEx vs OpEx), scalability, security and
+          operational management, and examines hybrid
+          architectures as a balance between control and
+          flexibility. It also covers AWS global infrastructure
+          (Regions, Availability Zones, Edge Locations) and
+          the main managed database services: Amazon RDS,
+          Aurora, DynamoDB and Redshift.
+        </p>
+
+        <p data-i18n="projectP3">
+          The analysis is complemented by hands-on experience
+          from guided AWS labs carried out during my Cloud
+          Networking course, including the setup of a cloud
+          database on Amazon RDS.
+        </p>
+
+        <div class="project-tags">
+          <span>AWS</span>
+          <span>Cloud Computing</span>
+          <span>Databases</span>
+          <span>Amazon RDS</span>
+          <span>Cloud Architecture</span>
+        </div>
+
+      </article>
+    </section>
+
+    <!-- CURRICULUM VITAE -->
+
+    <section id="cv">
+      <h2>Curriculum Vitae</h2>
+
+      <p class="cv-note" data-i18n="cvText">
+        My curriculum vitae will be available here soon.
       </p>
     </section>
 
     <!-- CONTACT -->
 
     <section id="contact">
-      <h2>Contact</h2>
+      <h2 data-i18n="contact">Contact</h2>
 
       <div class="social-links">
 
-        <!-- GitHub -->
+        <!-- GITHUB -->
+
         <a href="https://github.com/suziane-queiroz"
            target="_blank"
            rel="noopener noreferrer"
@@ -595,7 +816,8 @@
           </svg>
         </a>
 
-        <!-- LinkedIn -->
+        <!-- LINKEDIN -->
+
         <a href="https://www.linkedin.com/in/suziane-silva-queiroz"
            target="_blank"
            rel="noopener noreferrer"
@@ -623,12 +845,11 @@
 
   <!-- BACK TO TOP BUTTON -->
 
-  <button
-    class="back-to-top"
-    id="backToTop"
-    type="button"
-    aria-label="Back to top"
-    title="Back to top">
+  <button class="back-to-top"
+          id="backToTop"
+          type="button"
+          aria-label="Back to top"
+          title="Back to top">
 
     <svg xmlns="http://www.w3.org/2000/svg"
          viewBox="0 0 24 24"
@@ -641,13 +862,176 @@
       <path d="M12 19V5"/>
       <path d="m5 12 7-7 7 7"/>
     </svg>
-
   </button>
 
-  <!-- BACK TO TOP SCRIPT -->
+  <!-- TRANSLATIONS AND INTERACTIONS -->
 
   <script>
-    const backToTopButton = document.getElementById("backToTop");
+    const translations = {
+      en: {
+        home: "Home",
+        biography: "Biography",
+        education: "Education",
+        projects: "Projects",
+        contact: "Contact",
+        portfolioLabel: "Personal Website & Portfolio",
+
+        bioWelcome:
+          "Welcome to my personal website and portfolio.",
+
+        bioP1:
+          "I am currently pursuing an MSc in Computer Engineering, Cybersecurity and Artificial Intelligence at the University of Cagliari, where the programme is taught entirely in English.",
+
+        bioP2:
+          "I hold a BSc in Electronic, Computer and Telecommunication Engineering from the same university, with a focus on Computer Science. My academic background has provided me with a foundation in computer networks, programming and digital systems.",
+
+        bioP3:
+          "I am particularly interested in network security, artificial intelligence and the intersection between AI and cybersecurity. I enjoy exploring how technology can be applied to real-world challenges.",
+
+        bioP4:
+          "Alongside my academic journey, I continue to develop my technical skills and explore new areas of computer engineering.",
+
+        masters: "Master's Degree",
+        bachelors: "Bachelor's Degree",
+        inProgress: "In progress",
+        completed: "Completed in 2026",
+        thesisLabel: "Bachelor's Thesis · 2026",
+
+        projectP1:
+          "Bachelor's thesis comparing traditional on-premises database management with cloud-based solutions on Amazon Web Services (AWS).",
+
+        projectP2:
+          "The work compares the two models in terms of control, costs (CapEx vs OpEx), scalability, security and operational management, and examines hybrid architectures as a balance between control and flexibility. It also covers AWS global infrastructure (Regions, Availability Zones, Edge Locations) and the main managed database services: Amazon RDS, Aurora, DynamoDB and Redshift.",
+
+        projectP3:
+          "The analysis is complemented by hands-on experience from guided AWS labs carried out during my Cloud Networking course, including the setup of a cloud database on Amazon RDS.",
+
+        cvText:
+          "My curriculum vitae will be available here soon."
+      },
+
+      it: {
+        home: "Home",
+        biography: "Biografia",
+        education: "Formazione",
+        projects: "Progetti",
+        contact: "Contatti",
+        portfolioLabel: "Sito personale e Portfolio",
+
+        bioWelcome:
+          "Benvenuti nel mio sito personale e portfolio.",
+
+        bioP1:
+          "Sto frequentando la Laurea Magistrale in Computer Engineering, Cybersecurity and Artificial Intelligence presso l'Università di Cagliari, un corso di studi erogato interamente in lingua inglese.",
+
+        bioP2:
+          "Ho conseguito la Laurea Triennale in Ingegneria Elettronica, Informatica e delle Telecomunicazioni presso lo stesso Ateneo, con un percorso orientato all'informatica. La mia formazione universitaria mi ha fornito una base nelle reti informatiche, nella programmazione e nei sistemi digitali.",
+
+        bioP3:
+          "Sono particolarmente interessata alla sicurezza delle reti, all'intelligenza artificiale e all'intersezione tra AI e cybersecurity. Mi piace esplorare come la tecnologia possa essere applicata a problemi concreti.",
+
+        bioP4:
+          "Parallelamente al mio percorso universitario, continuo a sviluppare le mie competenze tecniche e ad approfondire nuovi ambiti dell'ingegneria informatica.",
+
+        masters: "Laurea Magistrale",
+        bachelors: "Laurea Triennale",
+        inProgress: "In corso",
+        completed: "Conseguita nel 2026",
+        thesisLabel: "Tesi di Laurea Triennale · 2026",
+
+        projectP1:
+          "Tesi di laurea triennale dedicata al confronto tra la gestione tradizionale dei database on-premises e le soluzioni basate sul cloud di Amazon Web Services (AWS).",
+
+        projectP2:
+          "Il lavoro confronta i due modelli in termini di controllo, costi (CapEx e OpEx), scalabilità, sicurezza e gestione operativa, esaminando le architetture ibride come equilibrio tra controllo e flessibilità. Analizza inoltre l'infrastruttura globale AWS (Regions, Availability Zones ed Edge Locations) e i principali servizi database gestiti: Amazon RDS, Aurora, DynamoDB e Redshift.",
+
+        projectP3:
+          "L'analisi è completata da esperienze pratiche svolte nei laboratori guidati AWS durante il corso di Cloud Networking, tra cui la configurazione di un database cloud su Amazon RDS.",
+
+        cvText:
+          "Il mio curriculum vitae sarà disponibile prossimamente."
+      },
+
+      pt: {
+        home: "Início",
+        biography: "Biografia",
+        education: "Formação",
+        projects: "Projetos",
+        contact: "Contato",
+        portfolioLabel: "Site pessoal e Portfólio",
+
+        bioWelcome:
+          "Bem-vindos ao meu site pessoal e portfólio.",
+
+        bioP1:
+          "Atualmente, curso o mestrado em Computer Engineering, Cybersecurity and Artificial Intelligence na Universidade de Cagliari, com aulas ministradas inteiramente em inglês.",
+
+        bioP2:
+          "Sou graduada em Electronic, Computer and Telecommunication Engineering pela mesma universidade, com foco em Ciência da Computação. Minha formação acadêmica me proporcionou uma base em redes de computadores, programação e sistemas digitais.",
+
+        bioP3:
+          "Tenho especial interesse em segurança de redes, inteligência artificial e na interseção entre IA e cibersegurança. Gosto de explorar como a tecnologia pode ser aplicada a desafios do mundo real.",
+
+        bioP4:
+          "Paralelamente à minha formação acadêmica, continuo desenvolvendo minhas habilidades técnicas e explorando novas áreas da engenharia de computação.",
+
+        masters: "Mestrado",
+        bachelors: "Graduação",
+        inProgress: "Em andamento",
+        completed: "Concluída em 2026",
+        thesisLabel: "Trabalho de Conclusão de Curso · 2026",
+
+        projectP1:
+          "Trabalho de conclusão de graduação que compara o gerenciamento tradicional de bancos de dados on-premises com soluções baseadas em nuvem da Amazon Web Services (AWS).",
+
+        projectP2:
+          "O trabalho compara os dois modelos em termos de controle, custos (CapEx e OpEx), escalabilidade, segurança e gerenciamento operacional, além de examinar arquiteturas híbridas como um equilíbrio entre controle e flexibilidade. Também aborda a infraestrutura global da AWS (Regions, Availability Zones e Edge Locations) e os principais serviços gerenciados de banco de dados: Amazon RDS, Aurora, DynamoDB e Redshift.",
+
+        projectP3:
+          "A análise é complementada por experiências práticas em laboratórios guiados da AWS realizados durante a disciplina de Cloud Networking, incluindo a configuração de um banco de dados em nuvem no Amazon RDS.",
+
+        cvText:
+          "Meu currículo estará disponível em breve."
+      }
+    };
+
+    /* LANGUAGE SWITCHING */
+
+    const languageSelect =
+      document.getElementById("languageSelect");
+
+    function changeLanguage(language) {
+      const selected = translations[language];
+
+      if (!selected) return;
+
+      document.documentElement.lang = language === "pt"
+        ? "pt-BR"
+        : language;
+
+      document.querySelectorAll("[data-i18n]").forEach(
+        function (element) {
+          const key = element.getAttribute("data-i18n");
+
+          if (selected[key] !== undefined) {
+            element.textContent = selected[key];
+          }
+        }
+      );
+
+      languageSelect.value = language;
+    }
+
+    languageSelect.addEventListener("change", function () {
+      changeLanguage(this.value);
+    });
+
+    changeLanguage("en");
+
+    /* BACK TO TOP */
+
+    const backToTopButton =
+      document.getElementById("backToTop");
 
     function updateBackToTop() {
       if (window.scrollY > 250) {
@@ -657,9 +1041,11 @@
       }
     }
 
-    window.addEventListener("scroll", updateBackToTop, {
-      passive: true
-    });
+    window.addEventListener(
+      "scroll",
+      updateBackToTop,
+      { passive: true }
+    );
 
     backToTopButton.addEventListener("click", function () {
       const reducedMotion = window.matchMedia(
