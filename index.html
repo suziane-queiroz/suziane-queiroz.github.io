@@ -140,6 +140,7 @@
       align-items: center;
       gap: 65px;
       padding: 85px 0;
+      scroll-margin-top: 110px;
     }
 
     .profile-photo {
@@ -315,14 +316,16 @@
       color: var(--accent);
     }
 
-    /* FOOTER */
+    /* FOOTER - NAVY BLUE */
 
     footer {
-      border-top: 1px solid var(--border);
+      background: var(--navy);
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
       text-align: center;
-      padding: 32px 20px;
+      padding: 35px 20px;
       font-size: 13px;
-      color: #777;
+      color: var(--white);
+      letter-spacing: 0.3px;
     }
 
     /* TABLET */
@@ -343,7 +346,8 @@
         scroll-padding-top: 155px;
       }
 
-      section {
+      section,
+      .profile {
         scroll-margin-top: 155px;
       }
     }
