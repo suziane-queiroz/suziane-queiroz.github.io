@@ -1,9 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Personal website and portfolio of Suziane Silva Queiroz">
+
+  <meta name="description"
+        content="Personal website and portfolio of Suziane Silva Queiroz">
+
   <title>Suziane Silva Queiroz | Personal Website</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,9 +24,13 @@
       --white: #FFFFFF;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
@@ -37,6 +45,8 @@
       margin: auto;
       padding: 0 28px;
     }
+
+    /* Navigation */
 
     header {
       border-bottom: 1px solid var(--border);
@@ -72,12 +82,26 @@
       font-size: 14px;
     }
 
-    .nav-links a:hover, a:hover {
+    .nav-links a:hover,
+    a:hover {
       color: var(--accent);
     }
 
+    /* Main introduction */
+
     .hero {
-      padding: 115px 0 100px;
+      padding: 100px 0 95px;
+    }
+
+    .hero-content {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.8fr);
+      align-items: center;
+      gap: 65px;
+    }
+
+    .hero-text {
+      min-width: 0;
     }
 
     .eyebrow {
@@ -95,7 +119,7 @@
     }
 
     h1 {
-      font-size: clamp(42px, 7vw, 68px);
+      font-size: clamp(52px, 7vw, 76px);
       margin: 18px 0 22px;
       font-weight: 500;
     }
@@ -108,8 +132,23 @@
 
     .intro {
       font-size: 18px;
-      max-width: 650px;
+      max-width: 550px;
     }
+
+    /* Profile photo */
+
+    .hero-image img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      object-position: center 35%;
+      border-radius: 12px;
+      box-shadow: 0 14px 35px rgba(31, 42, 68, 0.09);
+    }
+
+    /* Button */
 
     .button {
       display: inline-block;
@@ -121,12 +160,15 @@
       text-decoration: none;
       font-size: 14px;
       font-weight: 600;
+      transition: background 0.2s ease;
     }
 
     .button:hover {
       background: var(--accent);
       color: white;
     }
+
+    /* Sections */
 
     section {
       padding: 75px 0;
@@ -137,6 +179,8 @@
     .section-text {
       max-width: 720px;
     }
+
+    /* Education cards */
 
     .cards {
       display: grid;
@@ -166,6 +210,8 @@
       color: var(--accent);
     }
 
+    /* Footer */
+
     footer {
       border-top: 1px solid var(--border);
       text-align: center;
@@ -174,21 +220,54 @@
       color: #777;
     }
 
+    /* Responsive layout */
+
+    @media (max-width: 700px) {
+      .hero-content {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .hero-image {
+        max-width: 330px;
+      }
+    }
+
     @media (max-width: 650px) {
-      nav { align-items: flex-start; }
-      .nav-links { gap: 15px; }
-      .hero { padding: 75px 0; }
-      section { padding: 55px 0; }
-      .cards { grid-template-columns: 1fr; }
+      nav {
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        gap: 15px;
+      }
+
+      .hero {
+        padding: 75px 0;
+      }
+
+      section {
+        padding: 55px 0;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 
 <body>
+
+  <!-- Header -->
+
   <header>
     <div class="container">
       <nav>
-        <a class="brand" href="#">Suziane Silva Queiroz</a>
+        <a class="brand" href="#">
+          Suziane Silva Queiroz
+        </a>
+
         <div class="nav-links">
           <a href="#about">About</a>
           <a href="#education">Education</a>
@@ -201,18 +280,44 @@
 
   <main class="container">
 
+    <!-- Homepage -->
+
     <div class="hero">
-      <p class="eyebrow">Personal Website & Portfolio</p>
-      <h1>Suziane Silva Queiroz</h1>
-      <p class="intro">
-        Exploring technology, cybersecurity,
-        artificial intelligence and software development.
-      </p>
-      <a class="button" href="#about">Discover More</a>
+      <div class="hero-content">
+
+        <div class="hero-text">
+          <p class="eyebrow">
+            Personal Website & Portfolio
+          </p>
+
+          <h1>Suziane</h1>
+
+          <p class="intro">
+            Exploring technology, cybersecurity,
+            artificial intelligence and software development.
+          </p>
+
+          <a class="button" href="#about">
+            Discover More
+          </a>
+        </div>
+
+        <div class="hero-image">
+          <img
+            src="profile.jpeg"
+            alt="Portrait of Suziane Silva Queiroz"
+            width="600"
+            height="800">
+        </div>
+
+      </div>
     </div>
+
+    <!-- About -->
 
     <section id="about">
       <h2>About Me</h2>
+
       <p class="section-text">
         Welcome to my personal website.
         This is a space where I share my educational
@@ -221,9 +326,13 @@
       </p>
     </section>
 
+    <!-- Education -->
+
     <section id="education">
       <h2>Education</h2>
+
       <div class="cards">
+
         <div class="card">
           <h3>Master's Degree</h3>
           <p>
@@ -232,6 +341,7 @@
             University of Cagliari
           </p>
         </div>
+
         <div class="card">
           <h3>Bachelor's Degree</h3>
           <p>
@@ -240,23 +350,31 @@
             University of Cagliari
           </p>
         </div>
+
       </div>
     </section>
 
+    <!-- Projects -->
+
     <section id="projects">
       <h2>Projects</h2>
+
       <p class="section-text">
         This section will feature selected projects
         and practical work as my portfolio develops.
       </p>
     </section>
 
+    <!-- Contact -->
+
     <section id="contact">
       <h2>Contact</h2>
+
       <p>
         You can explore my projects and repositories on
         <a href="https://github.com/suziane-queiroz"
-           target="_blank" rel="noopener noreferrer">
+           target="_blank"
+           rel="noopener noreferrer">
           GitHub
         </a>.
       </p>
@@ -264,9 +382,12 @@
 
   </main>
 
+  <!-- Footer -->
+
   <footer>
     © 2026 Suziane Silva Queiroz
   </footer>
+
 </body>
 </html>
 
