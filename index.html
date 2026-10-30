@@ -73,18 +73,27 @@
       gap: 20px;
     }
 
+    /* BRAND - BLUE GLOW AND GENTLE LIFT */
+
     .brand {
+      display: inline-block;
       font-family: "Playfair Display", serif;
       font-size: 21px;
       font-weight: 600;
       color: var(--ivory);
       text-decoration: none;
       white-space: nowrap;
-      transition: color 0.25s ease;
+
+      transition:
+        color 0.3s ease,
+        transform 0.3s ease,
+        text-shadow 0.3s ease;
     }
 
     .brand:hover {
       color: var(--electric-blue);
+      transform: translateY(-2px);
+      text-shadow: 0 0 12px rgba(122,184,255,0.45);
     }
 
     .nav-right {
@@ -109,6 +118,7 @@
       color: var(--ivory);
       text-decoration: none;
       padding: 8px 2px;
+
       transition:
         color 0.3s ease,
         transform 0.3s ease,
@@ -127,9 +137,11 @@
       background: var(--electric-blue);
       transform: scaleX(0);
       transform-origin: center;
+
       box-shadow:
         0 0 8px rgba(122,184,255,0.9),
         0 0 14px rgba(122,184,255,0.5);
+
       transition: transform 0.3s ease;
     }
 
@@ -251,7 +263,7 @@
       line-height: 1.3;
     }
 
-    /* NAME: SUZIANE - 44 PX */
+    /* NAME: SUZIANE - 44 PX ON DESKTOP */
 
     h1 {
       font-size: 44px;
@@ -315,7 +327,6 @@
       border: 1px solid var(--border);
       border-radius: 8px;
 
-      /* SOFT BLUE HOVER */
       transition:
         transform 0.3s ease,
         border-color 0.3s ease,
@@ -325,6 +336,7 @@
     .education-item:hover {
       transform: translateY(-3px);
       border-color: var(--electric-blue);
+
       box-shadow:
         0 8px 24px rgba(31,42,68,0.06),
         0 0 16px rgba(122,184,255,0.16);
@@ -357,7 +369,6 @@
       padding: 32px;
       margin-top: 28px;
 
-      /* BLUE PROJECT HOVER */
       transition:
         transform 0.3s ease,
         border-color 0.3s ease,
@@ -367,6 +378,7 @@
     .project-card:hover {
       transform: translateY(-3px);
       border-color: var(--electric-blue);
+
       box-shadow:
         0 12px 30px rgba(31,42,68,0.06),
         0 0 22px rgba(122,184,255,0.20);
@@ -439,6 +451,7 @@
       color: var(--ivory);
       border-radius: 10px;
       text-decoration: none;
+
       transition:
         background 0.2s ease,
         transform 0.2s ease;
@@ -541,7 +554,7 @@
       }
     }
 
-    /* SMARTPHONE */
+    /* SMARTPHONE - HORIZONTAL PROFILE LAYOUT */
 
     @media (max-width: 600px) {
       .container {
@@ -565,28 +578,54 @@
         padding-left: 8px;
       }
 
+      /*
+       * MOBILE PROFILE:
+       * PHOTO LEFT, TEXT RIGHT
+       */
+
       .profile {
-        grid-template-columns: 1fr;
-        gap: 25px;
+        grid-template-columns: 110px minmax(0, 1fr);
+        align-items: center;
+        gap: 18px;
         padding: 55px 0;
       }
 
       .profile-photo {
-        width: 160px;
+        width: 110px;
         max-width: 100%;
-        margin: 0 auto;
+        margin: 0;
       }
 
       .profile-info {
-        text-align: center;
+        text-align: left;
+        min-width: 0;
+      }
+
+      .eyebrow {
+        font-size: 9px;
+        letter-spacing: 1px;
+        line-height: 1.5;
+        margin-bottom: 8px;
+      }
+
+      h1 {
+        font-size: 32px;
+        margin-bottom: 8px;
+      }
+
+      .subtitle {
+        font-size: 13px;
+        line-height: 1.5;
+        margin-bottom: 8px;
+      }
+
+      .university {
+        font-size: 12px;
+        line-height: 1.5;
       }
 
       section {
         padding: 50px 0;
-      }
-
-      h1 {
-        font-size: 44px;
       }
 
       h2 {
@@ -627,6 +666,7 @@
         transition: none;
       }
 
+      .brand:hover,
       .nav-links a:hover,
       .profile-photo img:hover,
       .education-item:hover,
