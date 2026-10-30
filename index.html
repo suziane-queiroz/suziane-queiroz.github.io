@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -223,7 +224,46 @@
       max-width: 760px;
     }
 
-    /* CONTACT */
+    /* SOCIAL ICONS */
+
+    .social-links {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 10px;
+      text-decoration: none;
+      transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .social-links a:hover {
+      background: var(--accent);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    .social-links a:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 4px;
+    }
+
+    .social-links svg {
+      width: 30px;
+      height: 30px;
+    }
+
+    /* GENERAL LINKS */
 
     a {
       color: var(--accent);
@@ -426,14 +466,24 @@
     <section id="contact">
       <h2>Contact</h2>
 
-      <p>
-        You can explore my repositories and projects on
+      <div class="social-links">
         <a href="https://github.com/suziane-queiroz"
            target="_blank"
-           rel="noopener noreferrer">
-          GitHub
-        </a>.
-      </p>
+           rel="noopener noreferrer"
+           aria-label="Visit my GitHub profile"
+           title="GitHub">
+
+          <!-- GitHub icon -->
+          <svg xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 24 24"
+               fill="currentColor"
+               aria-hidden="true">
+            <path d="M12 .3a12 12 0 0 0-3.793 23.386c.6.111.82-.261.82-.577v-2.234c-3.338.726-4.043-1.416-4.043-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.73.083-.73 1.205.085 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.304.762-1.604-2.665-.304-5.467-1.333-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.536-1.524.118-3.176 0 0 1.008-.323 3.301 1.23a11.52 11.52 0 0 1 6.008 0c2.291-1.553 3.297-1.23 3.297-1.23.656 1.652.244 2.873.12 3.176.77.84 1.235 1.91 1.235 3.221 0 4.61-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.216.694.825.576A12.001 12.001 0 0 0 12 .3Z"/>
+          </svg>
+
+        </a>
+      </div>
+
     </section>
 
   </main>
