@@ -248,6 +248,8 @@
       min-width: 0;
     }
 
+    /* PERSONAL WEBSITE & PORTFOLIO */
+
     .eyebrow {
       color: var(--accent);
       text-transform: uppercase;
@@ -255,6 +257,10 @@
       font-weight: 700;
       letter-spacing: 2.5px;
       margin: 0 0 12px;
+
+      transition:
+        color 0.3s ease,
+        text-shadow 0.3s ease;
     }
 
     h1, h2, h3 {
@@ -263,12 +269,33 @@
       line-height: 1.3;
     }
 
-    /* NAME: SUZIANE - 44 PX ON DESKTOP */
+    /* SUZIANE - 38 PX ON DESKTOP */
 
     h1 {
-      font-size: 44px;
+      font-size: 38px;
       font-weight: 500;
       margin: 0 0 15px;
+
+      transition:
+        transform 0.3s ease,
+        color 0.3s ease,
+        text-shadow 0.3s ease;
+    }
+
+    /* HOVER EFFECTS ON INTRODUCTION TEXT */
+    /* ACTIVE ONLY WITH A REAL MOUSE */
+
+    @media (hover: hover) and (pointer: fine) {
+      .profile-info h1:hover {
+        transform: translateY(-2px);
+        color: var(--accent);
+        text-shadow: 0 0 12px rgba(122,184,255,0.40);
+      }
+
+      .profile-info .eyebrow:hover {
+        color: #4D8FD4;
+        text-shadow: 0 0 9px rgba(122,184,255,0.40);
+      }
     }
 
     .subtitle {
@@ -608,8 +635,10 @@
         margin-bottom: 8px;
       }
 
+      /* SUZIANE - 28 PX ON MOBILE */
+
       h1 {
-        font-size: 32px;
+        font-size: 28px;
         margin-bottom: 8px;
       }
 
@@ -659,6 +688,8 @@
       .nav-links a::after,
       .brand,
       .profile-photo img,
+      .profile-info h1,
+      .profile-info .eyebrow,
       .education-item,
       .project-card,
       .social-links a,
@@ -669,6 +700,7 @@
       .brand:hover,
       .nav-links a:hover,
       .profile-photo img:hover,
+      .profile-info h1:hover,
       .education-item:hover,
       .project-card:hover {
         transform: none;
