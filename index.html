@@ -283,7 +283,6 @@
     }
 
     /* HOVER EFFECTS ON INTRODUCTION TEXT */
-    /* ACTIVE ONLY WITH A REAL MOUSE */
 
     @media (hover: hover) and (pointer: fine) {
       .profile-info h1:hover {
@@ -318,10 +317,44 @@
       scroll-margin-top: 150px;
     }
 
+    /* SECTION TITLES - SUBTLE BLUE HOVER */
+
     h2 {
       font-size: 34px;
       font-weight: 500;
       margin: 0 0 22px;
+      width: fit-content;
+      max-width: 100%;
+      position: relative;
+
+      transition: color 0.3s ease;
+    }
+
+    h2::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 100%;
+      height: 1px;
+      background: var(--electric-blue);
+      transform: scaleX(0);
+      transform-origin: left;
+
+      box-shadow:
+        0 0 5px rgba(122,184,255,0.25);
+
+      transition: transform 0.3s ease;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      h2:hover {
+        color: var(--accent);
+      }
+
+      h2:hover::after {
+        transform: scaleX(1);
+      }
     }
 
     /* BIOGRAPHY */
@@ -690,6 +723,8 @@
       .profile-photo img,
       .profile-info h1,
       .profile-info .eyebrow,
+      h2,
+      h2::after,
       .education-item,
       .project-card,
       .social-links a,
@@ -1130,7 +1165,7 @@
           "Trabalho de conclusão de graduação que compara o gerenciamento tradicional de bancos de dados on-premises com soluções baseadas em nuvem da Amazon Web Services (AWS).",
 
         projectP2:
-          "O trabalho compara os dois modelos em termos de controle, custos (CapEx e OpEx), escalabilidade, segurança e gerenciamento operacional, além de examinar arquiteturas híbridas como um equilíbrio entre controle e flexibilidade. Também aborda a infraestrutura global da AWS (Regions, Availability Zones e Edge Locations) e os principais serviços gerenciados de banco de dados: Amazon RDS, Aurora, DynamoDB e Redshift.",
+          "O trabalho compara os dois modelos em termos de controle, custos (CapEx vs OpEx), escalabilidade, segurança e gerenciamento operacional, além de examinar arquiteturas híbridas como um equilíbrio entre controle e flexibilidade. Também aborda a infraestrutura global da AWS (Regions, Availability Zones e Edge Locations) e os principais serviços gerenciados de banco de dados: Amazon RDS, Aurora, DynamoDB e Redshift.",
 
         projectP3:
           "A análise é complementada por experiências práticas em laboratórios guiados da AWS realizados durante a disciplina de Cloud Networking, incluindo a configuração de um banco de dados em nuvem no Amazon RDS.",
