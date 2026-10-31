@@ -12,8 +12,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap"
-        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -25,8 +24,6 @@
       --ivory: #FAF8F5;
       --white: #FFFFFF;
       --hover: #AFC9E8;
-
-      /* BLUE GLOW EFFECTS */
       --electric-blue: #7AB8FF;
       --electric-blue-soft: rgba(122,184,255,0.20);
     }
@@ -83,7 +80,6 @@
       color: var(--ivory);
       text-decoration: none;
       white-space: nowrap;
-
       transition:
         color 0.3s ease,
         transform 0.3s ease,
@@ -118,7 +114,6 @@
       color: var(--ivory);
       text-decoration: none;
       padding: 8px 2px;
-
       transition:
         color 0.3s ease,
         transform 0.3s ease,
@@ -137,11 +132,9 @@
       background: var(--electric-blue);
       transform: scaleX(0);
       transform-origin: center;
-
       box-shadow:
         0 0 8px rgba(122,184,255,0.9),
         0 0 14px rgba(122,184,255,0.5);
-
       transition: transform 0.3s ease;
     }
 
@@ -224,10 +217,8 @@
       height: auto;
       border-radius: 10px;
       box-shadow: 0 12px 30px rgba(31,42,68,0.08);
-
       outline: 2px solid transparent;
       outline-offset: 3px;
-
       transition:
         transform 0.35s ease,
         box-shadow 0.35s ease,
@@ -237,7 +228,6 @@
     .profile-photo img:hover {
       transform: scale(1.035);
       outline-color: var(--electric-blue);
-
       box-shadow:
         0 0 0 6px rgba(122,184,255,0.12),
         0 0 28px rgba(81,145,235,0.38),
@@ -257,7 +247,6 @@
       font-weight: 700;
       letter-spacing: 2.5px;
       margin: 0 0 12px;
-
       transition:
         color 0.3s ease,
         text-shadow 0.3s ease;
@@ -275,7 +264,6 @@
       font-size: 38px;
       font-weight: 500;
       margin: 0 0 15px;
-
       transition:
         transform 0.3s ease,
         color 0.3s ease,
@@ -326,7 +314,6 @@
       width: fit-content;
       max-width: 100%;
       position: relative;
-
       transition: color 0.3s ease;
     }
 
@@ -340,10 +327,7 @@
       background: var(--electric-blue);
       transform: scaleX(0);
       transform-origin: left;
-
-      box-shadow:
-        0 0 5px rgba(122,184,255,0.25);
-
+      box-shadow: 0 0 5px rgba(122,184,255,0.25);
       transition: transform 0.3s ease;
     }
 
@@ -386,7 +370,6 @@
       background: var(--white);
       border: 1px solid var(--border);
       border-radius: 8px;
-
       transition:
         transform 0.3s ease,
         border-color 0.3s ease,
@@ -396,7 +379,6 @@
     .education-item:hover {
       transform: translateY(-3px);
       border-color: var(--electric-blue);
-
       box-shadow:
         0 8px 24px rgba(31,42,68,0.06),
         0 0 16px rgba(122,184,255,0.16);
@@ -428,7 +410,6 @@
       border-radius: 9px;
       padding: 32px;
       margin-top: 28px;
-
       transition:
         transform 0.3s ease,
         border-color 0.3s ease,
@@ -438,7 +419,6 @@
     .project-card:hover {
       transform: translateY(-3px);
       border-color: var(--electric-blue);
-
       box-shadow:
         0 12px 30px rgba(31,42,68,0.06),
         0 0 22px rgba(122,184,255,0.20);
@@ -511,7 +491,6 @@
       color: var(--ivory);
       border-radius: 10px;
       text-decoration: none;
-
       transition:
         background 0.2s ease,
         transform 0.2s ease;
@@ -527,8 +506,6 @@
       width: 30px;
       height: 30px;
     }
-
-    /* GENERAL LINKS */
 
     a {
       color: var(--accent);
@@ -553,11 +530,9 @@
       right: 28px;
       bottom: 28px;
       z-index: 200;
-
       display: flex;
       align-items: center;
       justify-content: center;
-
       width: 48px;
       height: 48px;
       background: var(--navy);
@@ -566,11 +541,9 @@
       border-radius: 10px;
       box-shadow: 0 5px 18px rgba(31,42,68,0.2);
       cursor: pointer;
-
       opacity: 0;
       visibility: hidden;
       transform: translateY(12px);
-
       transition:
         opacity 0.3s ease,
         visibility 0.3s ease,
@@ -637,11 +610,6 @@
       .language-selector {
         padding-left: 8px;
       }
-
-      /*
-       * MOBILE PROFILE:
-       * PHOTO LEFT, TEXT RIGHT
-       */
 
       .profile {
         grid-template-columns: 110px minmax(0, 1fr);
@@ -767,8 +735,6 @@
             <a href="#contact" data-i18n="contact">Contact</a>
           </div>
 
-          <!-- LANGUAGE SELECTOR -->
-
           <div class="language-selector">
 
             <svg xmlns="http://www.w3.org/2000/svg"
@@ -881,6 +847,8 @@
 
       <div class="education-list">
 
+        <!-- MASTER'S DEGREE: STATUS REMAINS -->
+
         <div class="education-item">
           <h3 data-i18n="masters">Master's Degree</h3>
 
@@ -895,6 +863,8 @@
           </div>
         </div>
 
+        <!-- BACHELOR'S DEGREE: NO DATE OR STATUS -->
+
         <div class="education-item">
           <h3 data-i18n="bachelors">Bachelor's Degree</h3>
 
@@ -903,10 +873,6 @@
             <br>
             University of Cagliari
           </p>
-
-          <div class="education-status" data-i18n="completed">
-            Completed in 2026
-          </div>
         </div>
 
       </div>
@@ -1074,7 +1040,6 @@
         masters: "Master's Degree",
         bachelors: "Bachelor's Degree",
         inProgress: "In progress",
-        completed: "Completed in 2026",
         thesisLabel: "Bachelor's Thesis · 2026",
 
         projectP1:
@@ -1116,7 +1081,6 @@
         masters: "Laurea Magistrale",
         bachelors: "Laurea Triennale",
         inProgress: "In corso",
-        completed: "Conseguita nel 2026",
         thesisLabel: "Tesi di Laurea Triennale · 2026",
 
         projectP1:
@@ -1158,14 +1122,13 @@
         masters: "Mestrado",
         bachelors: "Graduação",
         inProgress: "Em andamento",
-        completed: "Concluída em 2026",
         thesisLabel: "Trabalho de Conclusão de Curso · 2026",
 
         projectP1:
           "Trabalho de conclusão de graduação que compara o gerenciamento tradicional de bancos de dados on-premises com soluções baseadas em nuvem da Amazon Web Services (AWS).",
 
         projectP2:
-          "O trabalho compara os dois modelos em termos de controle, custos (CapEx vs OpEx), escalabilidade, segurança e gerenciamento operacional, além de examinar arquiteturas híbridas como um equilíbrio entre controle e flexibilidade. Também aborda a infraestrutura global da AWS (Regions, Availability Zones e Edge Locations) e os principais serviços gerenciados de banco de dados: Amazon RDS, Aurora, DynamoDB e Redshift.",
+          "O trabalho compara os dois modelos em termos de controle, custos (CapEx e OpEx), escalabilidade, segurança e gerenciamento operacional, além de examinar arquiteturas híbridas como um equilíbrio entre controle e flexibilidade. Também aborda a infraestrutura global da AWS (Regions, Availability Zones e Edge Locations) e os principais serviços gerenciados de banco de dados: Amazon RDS, Aurora, DynamoDB e Redshift.",
 
         projectP3:
           "A análise é complementada por experiências práticas em laboratórios guiados da AWS realizados durante a disciplina de Cloud Networking, incluindo a configuração de um banco de dados em nuvem no Amazon RDS.",
