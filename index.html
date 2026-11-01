@@ -4,11 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <meta name="description"
-        content="Personal website and portfolio of Suziane Silva Queiroz">
+  <meta name="description" content="Personal website and portfolio of Suziane Silva Queiroz">
 
   <title>Suziane Silva Queiroz | Personal Website</title>
+
+  <!-- FAVICON: IVORY S ON NAVY BACKGROUND -->
+  <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231F2A44'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='43' fill='%23FAF8F5' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -70,8 +72,6 @@
       gap: 20px;
     }
 
-    /* BRAND - BLUE GLOW AND GENTLE LIFT */
-
     .brand {
       display: inline-block;
       font-family: "Playfair Display", serif;
@@ -119,8 +119,6 @@
         transform 0.3s ease,
         text-shadow 0.3s ease;
     }
-
-    /* ELECTRIC BLUE MENU UNDERLINE */
 
     .nav-links a::after {
       content: "";
@@ -193,7 +191,7 @@
       outline-offset: 4px;
     }
 
-    /* PROFILE SECTION */
+    /* PROFILE */
 
     .profile {
       display: grid;
@@ -208,8 +206,6 @@
       width: 160px;
       max-width: 100%;
     }
-
-    /* BLUE GLOW ON PROFILE PHOTO */
 
     .profile-photo img {
       display: block;
@@ -238,8 +234,6 @@
       min-width: 0;
     }
 
-    /* PERSONAL WEBSITE & PORTFOLIO */
-
     .eyebrow {
       color: var(--accent);
       text-transform: uppercase;
@@ -258,8 +252,6 @@
       line-height: 1.3;
     }
 
-    /* SUZIANE - 38 PX ON DESKTOP */
-
     h1 {
       font-size: 38px;
       font-weight: 500;
@@ -269,8 +261,6 @@
         color 0.3s ease,
         text-shadow 0.3s ease;
     }
-
-    /* HOVER EFFECTS ON INTRODUCTION TEXT */
 
     @media (hover: hover) and (pointer: fine) {
       .profile-info h1:hover {
@@ -297,15 +287,13 @@
       margin-bottom: 0;
     }
 
-    /* CONTENT SECTIONS */
+    /* SECTIONS */
 
     section {
       padding: 65px 0;
       border-top: 1px solid var(--border);
       scroll-margin-top: 150px;
     }
-
-    /* SECTION TITLES - SUBTLE BLUE HOVER */
 
     h2 {
       font-size: 34px;
@@ -473,7 +461,7 @@
       font-size: 16px;
     }
 
-    /* SOCIAL ICONS */
+    /* CONTACT */
 
     .social-links {
       display: flex;
@@ -523,7 +511,7 @@
       letter-spacing: 0.3px;
     }
 
-    /* BACK TO TOP BUTTON */
+    /* BACK TO TOP */
 
     .back-to-top {
       position: fixed;
@@ -587,7 +575,7 @@
       }
     }
 
-    /* SMARTPHONE - HORIZONTAL PROFILE LAYOUT */
+    /* SMARTPHONE */
 
     @media (max-width: 600px) {
       .container {
@@ -635,8 +623,6 @@
         line-height: 1.5;
         margin-bottom: 8px;
       }
-
-      /* SUZIANE - 28 PX ON MOBILE */
 
       h1 {
         font-size: 28px;
@@ -736,7 +722,6 @@
           </div>
 
           <div class="language-selector">
-
             <svg xmlns="http://www.w3.org/2000/svg"
                  viewBox="0 0 24 24"
                  fill="none"
@@ -751,13 +736,11 @@
               <path d="M12 2a15.3 15.3 0 0 0-4 10 15.3 15.3 0 0 0 4 10"/>
             </svg>
 
-            <select id="languageSelect"
-                    aria-label="Choose website language">
+            <select id="languageSelect" aria-label="Choose website language">
               <option value="en" selected>EN</option>
               <option value="it">IT</option>
               <option value="pt">PT</option>
             </select>
-
           </div>
 
         </div>
@@ -780,7 +763,6 @@
       </div>
 
       <div class="profile-info">
-
         <p class="eyebrow" data-i18n="portfolioLabel">
           Personal Website & Portfolio
         </p>
@@ -794,7 +776,6 @@
         <p class="university">
           University of Cagliari
         </p>
-
       </div>
     </div>
 
@@ -804,7 +785,6 @@
       <h2 data-i18n="biography">Biography</h2>
 
       <div class="biography-text">
-
         <p data-i18n="bioWelcome">
           Welcome to my personal website and portfolio.
         </p>
@@ -836,7 +816,6 @@
           my technical skills and explore new areas of
           computer engineering.
         </p>
-
       </div>
     </section>
 
@@ -846,9 +825,6 @@
       <h2 data-i18n="education">Education</h2>
 
       <div class="education-list">
-
-        <!-- MASTER'S DEGREE: STATUS REMAINS -->
-
         <div class="education-item">
           <h3 data-i18n="masters">Master's Degree</h3>
 
@@ -863,8 +839,6 @@
           </div>
         </div>
 
-        <!-- BACHELOR'S DEGREE: NO DATE OR STATUS -->
-
         <div class="education-item">
           <h3 data-i18n="bachelors">Bachelor's Degree</h3>
 
@@ -874,7 +848,6 @@
             University of Cagliari
           </p>
         </div>
-
       </div>
     </section>
 
@@ -886,7 +859,7 @@
       <article class="project-card">
 
         <p class="project-label" data-i18n="thesisLabel">
-          Bachelor's Thesis · 2026
+          Bachelor's Thesis
         </p>
 
         <h3>
@@ -933,7 +906,6 @@
 
     <section id="cv">
       <h2>Curriculum Vitae</h2>
-
       <p class="cv-note" data-i18n="cvText">
         My curriculum vitae will be available here soon.
       </p>
@@ -947,13 +919,11 @@
       <div class="social-links">
 
         <!-- GITHUB -->
-
         <a href="https://github.com/suziane-queiroz"
            target="_blank"
            rel="noopener noreferrer"
            aria-label="Visit my GitHub profile"
            title="GitHub">
-
           <svg xmlns="http://www.w3.org/2000/svg"
                viewBox="0 0 24 24"
                fill="currentColor"
@@ -963,13 +933,11 @@
         </a>
 
         <!-- LINKEDIN -->
-
         <a href="https://www.linkedin.com/in/suziane-silva-queiroz"
            target="_blank"
            rel="noopener noreferrer"
            aria-label="Visit my LinkedIn profile"
            title="LinkedIn">
-
           <svg xmlns="http://www.w3.org/2000/svg"
                viewBox="0 0 24 24"
                fill="currentColor"
@@ -989,14 +957,13 @@
     © 2026 Suziane Silva Queiroz
   </footer>
 
-  <!-- BACK TO TOP BUTTON -->
+  <!-- BACK TO TOP -->
 
   <button class="back-to-top"
           id="backToTop"
           type="button"
           aria-label="Back to top"
           title="Back to top">
-
     <svg xmlns="http://www.w3.org/2000/svg"
          viewBox="0 0 24 24"
          fill="none"
@@ -1010,8 +977,6 @@
     </svg>
   </button>
 
-  <!-- TRANSLATIONS AND INTERACTIONS -->
-
   <script>
     const translations = {
       en: {
@@ -1021,38 +986,19 @@
         projects: "Projects",
         contact: "Contact",
         portfolioLabel: "Personal Website & Portfolio",
-
-        bioWelcome:
-          "Welcome to my personal website and portfolio.",
-
-        bioP1:
-          "I am currently pursuing an MSc in Computer Engineering, Cybersecurity and Artificial Intelligence at the University of Cagliari, where the programme is taught entirely in English.",
-
-        bioP2:
-          "I hold a BSc in Electronic, Computer and Telecommunication Engineering from the same university, with a focus on Computer Science. My academic background has provided me with a foundation in computer networks, programming and digital systems.",
-
-        bioP3:
-          "I am particularly interested in network security, artificial intelligence and the intersection between AI and cybersecurity. I enjoy exploring how technology can be applied to real-world challenges.",
-
-        bioP4:
-          "Alongside my academic journey, I continue to develop my technical skills and explore new areas of computer engineering.",
-
+        bioWelcome: "Welcome to my personal website and portfolio.",
+        bioP1: "I am currently pursuing an MSc in Computer Engineering, Cybersecurity and Artificial Intelligence at the University of Cagliari, where the programme is taught entirely in English.",
+        bioP2: "I hold a BSc in Electronic, Computer and Telecommunication Engineering from the same university, with a focus on Computer Science. My academic background has provided me with a foundation in computer networks, programming and digital systems.",
+        bioP3: "I am particularly interested in network security, artificial intelligence and the intersection between AI and cybersecurity. I enjoy exploring how technology can be applied to real-world challenges.",
+        bioP4: "Alongside my academic journey, I continue to develop my technical skills and explore new areas of computer engineering.",
         masters: "Master's Degree",
         bachelors: "Bachelor's Degree",
         inProgress: "In progress",
-        thesisLabel: "Bachelor's Thesis · 2026",
-
-        projectP1:
-          "Bachelor's thesis comparing traditional on-premises database management with cloud-based solutions on Amazon Web Services (AWS).",
-
-        projectP2:
-          "The work compares the two models in terms of control, costs (CapEx vs OpEx), scalability, security and operational management, and examines hybrid architectures as a balance between control and flexibility. It also covers AWS global infrastructure (Regions, Availability Zones, Edge Locations) and the main managed database services: Amazon RDS, Aurora, DynamoDB and Redshift.",
-
-        projectP3:
-          "The analysis is complemented by hands-on experience from guided AWS labs carried out during my Cloud Networking course, including the setup of a cloud database on Amazon RDS.",
-
-        cvText:
-          "My curriculum vitae will be available here soon."
+        thesisLabel: "Bachelor's Thesis",
+        projectP1: "Bachelor's thesis comparing traditional on-premises database management with cloud-based solutions on Amazon Web Services (AWS).",
+        projectP2: "The work compares the two models in terms of control, costs (CapEx vs OpEx), scalability, security and operational management, and examines hybrid architectures as a balance between control and flexibility. It also covers AWS global infrastructure (Regions, Availability Zones, Edge Locations) and the main managed database services: Amazon RDS, Aurora, DynamoDB and Redshift.",
+        projectP3: "The analysis is complemented by hands-on experience from guided AWS labs carried out during my Cloud Networking course, including the setup of a cloud database on Amazon RDS.",
+        cvText: "My curriculum vitae will be available here soon."
       },
 
       it: {
@@ -1062,38 +1008,19 @@
         projects: "Progetti",
         contact: "Contatti",
         portfolioLabel: "Sito personale e Portfolio",
-
-        bioWelcome:
-          "Benvenuti nel mio sito personale e portfolio.",
-
-        bioP1:
-          "Sto frequentando la Laurea Magistrale in Computer Engineering, Cybersecurity and Artificial Intelligence presso l'Università di Cagliari, un corso di studi erogato interamente in lingua inglese.",
-
-        bioP2:
-          "Ho conseguito la Laurea Triennale in Ingegneria Elettronica, Informatica e delle Telecomunicazioni presso lo stesso Ateneo, con un percorso orientato all'informatica. La mia formazione universitaria mi ha fornito una base nelle reti informatiche, nella programmazione e nei sistemi digitali.",
-
-        bioP3:
-          "Sono particolarmente interessata alla sicurezza delle reti, all'intelligenza artificiale e all'intersezione tra AI e cybersecurity. Mi piace esplorare come la tecnologia possa essere applicata a problemi concreti.",
-
-        bioP4:
-          "Parallelamente al mio percorso universitario, continuo a sviluppare le mie competenze tecniche e ad approfondire nuovi ambiti dell'ingegneria informatica.",
-
+        bioWelcome: "Benvenuti nel mio sito personale e portfolio.",
+        bioP1: "Sto frequentando la Laurea Magistrale in Computer Engineering, Cybersecurity and Artificial Intelligence presso l'Università di Cagliari, un corso di studi erogato interamente in lingua inglese.",
+        bioP2: "Ho conseguito la Laurea Triennale in Ingegneria Elettronica, Informatica e delle Telecomunicazioni presso lo stesso Ateneo, con un percorso orientato all'informatica. La mia formazione universitaria mi ha fornito una base nelle reti informatiche, nella programmazione e nei sistemi digitali.",
+        bioP3: "Sono particolarmente interessata alla sicurezza delle reti, all'intelligenza artificiale e all'intersezione tra AI e cybersecurity. Mi piace esplorare come la tecnologia possa essere applicata a problemi concreti.",
+        bioP4: "Parallelamente al mio percorso universitario, continuo a sviluppare le mie competenze tecniche e ad approfondire nuovi ambiti dell'ingegneria informatica.",
         masters: "Laurea Magistrale",
         bachelors: "Laurea Triennale",
         inProgress: "In corso",
-        thesisLabel: "Tesi di Laurea Triennale · 2026",
-
-        projectP1:
-          "Tesi di laurea triennale dedicata al confronto tra la gestione tradizionale dei database on-premises e le soluzioni basate sul cloud di Amazon Web Services (AWS).",
-
-        projectP2:
-          "Il lavoro confronta i due modelli in termini di controllo, costi (CapEx e OpEx), scalabilità, sicurezza e gestione operativa, esaminando le architetture ibride come equilibrio tra controllo e flessibilità. Analizza inoltre l'infrastruttura globale AWS (Regions, Availability Zones ed Edge Locations) e i principali servizi database gestiti: Amazon RDS, Aurora, DynamoDB e Redshift.",
-
-        projectP3:
-          "L'analisi è completata da esperienze pratiche svolte nei laboratori guidati AWS durante il corso di Cloud Networking, tra cui la configurazione di un database cloud su Amazon RDS.",
-
-        cvText:
-          "Il mio curriculum vitae sarà disponibile prossimamente."
+        thesisLabel: "Tesi di Laurea Triennale",
+        projectP1: "Tesi di laurea triennale dedicata al confronto tra la gestione tradizionale dei database on-premises e le soluzioni basate sul cloud di Amazon Web Services (AWS).",
+        projectP2: "Il lavoro confronta i due modelli in termini di controllo, costi (CapEx e OpEx), scalabilità, sicurezza e gestione operativa, esaminando le architetture ibride come equilibrio tra controllo e flessibilità. Analizza inoltre l'infrastruttura globale AWS (Regions, Availability Zones ed Edge Locations) e i principali servizi database gestiti: Amazon RDS, Aurora, DynamoDB e Redshift.",
+        projectP3: "L'analisi è completata da esperienze pratiche svolte nei laboratori guidati AWS durante il corso di Cloud Networking, tra cui la configurazione di un database cloud su Amazon RDS.",
+        cvText: "Il mio curriculum vitae sarà disponibile prossimamente."
       },
 
       pt: {
@@ -1103,64 +1030,39 @@
         projects: "Projetos",
         contact: "Contato",
         portfolioLabel: "Site pessoal e Portfólio",
-
-        bioWelcome:
-          "Bem-vindos ao meu site pessoal e portfólio.",
-
-        bioP1:
-          "Atualmente, curso o mestrado em Computer Engineering, Cybersecurity and Artificial Intelligence na Universidade de Cagliari, com aulas ministradas inteiramente em inglês.",
-
-        bioP2:
-          "Sou graduada em Electronic, Computer and Telecommunication Engineering pela mesma universidade, com foco em Ciência da Computação. Minha formação acadêmica me proporcionou uma base em redes de computadores, programação e sistemas digitais.",
-
-        bioP3:
-          "Tenho especial interesse em segurança de redes, inteligência artificial e na interseção entre IA e cibersegurança. Gosto de explorar como a tecnologia pode ser aplicada a desafios do mundo real.",
-
-        bioP4:
-          "Paralelamente à minha formação acadêmica, continuo desenvolvendo minhas habilidades técnicas e explorando novas áreas da engenharia de computação.",
-
+        bioWelcome: "Bem-vindos ao meu site pessoal e portfólio.",
+        bioP1: "Atualmente, curso o mestrado em Computer Engineering, Cybersecurity and Artificial Intelligence na Universidade de Cagliari, com aulas ministradas inteiramente em inglês.",
+        bioP2: "Sou graduada em Electronic, Computer and Telecommunication Engineering pela mesma universidade, com foco em Ciência da Computação. Minha formação acadêmica me proporcionou uma base em redes de computadores, programação e sistemas digitais.",
+        bioP3: "Tenho especial interesse em segurança de redes, inteligência artificial e na interseção entre IA e cibersegurança. Gosto de explorar como a tecnologia pode ser aplicada a desafios do mundo real.",
+        bioP4: "Paralelamente à minha formação acadêmica, continuo desenvolvendo minhas habilidades técnicas e explorando novas áreas da engenharia de computação.",
         masters: "Mestrado",
         bachelors: "Graduação",
         inProgress: "Em andamento",
-        thesisLabel: "Trabalho de Conclusão de Curso · 2026",
-
-        projectP1:
-          "Trabalho de conclusão de graduação que compara o gerenciamento tradicional de bancos de dados on-premises com soluções baseadas em nuvem da Amazon Web Services (AWS).",
-
-        projectP2:
-          "O trabalho compara os dois modelos em termos de controle, custos (CapEx e OpEx), escalabilidade, segurança e gerenciamento operacional, além de examinar arquiteturas híbridas como um equilíbrio entre controle e flexibilidade. Também aborda a infraestrutura global da AWS (Regions, Availability Zones e Edge Locations) e os principais serviços gerenciados de banco de dados: Amazon RDS, Aurora, DynamoDB e Redshift.",
-
-        projectP3:
-          "A análise é complementada por experiências práticas em laboratórios guiados da AWS realizados durante a disciplina de Cloud Networking, incluindo a configuração de um banco de dados em nuvem no Amazon RDS.",
-
-        cvText:
-          "Meu currículo estará disponível em breve."
+        thesisLabel: "Trabalho de Conclusão de Curso",
+        projectP1: "Trabalho de conclusão de graduação que compara o gerenciamento tradicional de bancos de dados on-premises com soluções baseadas em nuvem da Amazon Web Services (AWS).",
+        projectP2: "O trabalho compara os dois modelos em termos de controle, custos (CapEx e OpEx), escalabilidade, segurança e gerenciamento operacional, além de examinar arquiteturas híbridas como um equilíbrio entre controle e flexibilidade. Também aborda a infraestrutura global da AWS (Regions, Availability Zones e Edge Locations) e os principais serviços gerenciados de banco de dados: Amazon RDS, Aurora, DynamoDB e Redshift.",
+        projectP3: "A análise é complementada por experiências práticas em laboratórios guiados da AWS realizados durante a disciplina de Cloud Networking, incluindo a configuração de um banco de dados em nuvem no Amazon RDS.",
+        cvText: "Meu currículo estará disponível em breve."
       }
     };
 
     /* LANGUAGE SWITCHING */
 
-    const languageSelect =
-      document.getElementById("languageSelect");
+    const languageSelect = document.getElementById("languageSelect");
 
     function changeLanguage(language) {
       const selected = translations[language];
-
       if (!selected) return;
 
-      document.documentElement.lang = language === "pt"
-        ? "pt-BR"
-        : language;
+      document.documentElement.lang =
+        language === "pt" ? "pt-BR" : language;
 
-      document.querySelectorAll("[data-i18n]").forEach(
-        function (element) {
-          const key = element.getAttribute("data-i18n");
-
-          if (selected[key] !== undefined) {
-            element.textContent = selected[key];
-          }
+      document.querySelectorAll("[data-i18n]").forEach(function (element) {
+        const key = element.getAttribute("data-i18n");
+        if (selected[key] !== undefined) {
+          element.textContent = selected[key];
         }
-      );
+      });
 
       languageSelect.value = language;
     }
@@ -1173,8 +1075,7 @@
 
     /* BACK TO TOP */
 
-    const backToTopButton =
-      document.getElementById("backToTop");
+    const backToTopButton = document.getElementById("backToTop");
 
     function updateBackToTop() {
       if (window.scrollY > 250) {
@@ -1184,11 +1085,9 @@
       }
     }
 
-    window.addEventListener(
-      "scroll",
-      updateBackToTop,
-      { passive: true }
-    );
+    window.addEventListener("scroll", updateBackToTop, {
+      passive: true
+    });
 
     backToTopButton.addEventListener("click", function () {
       const reducedMotion = window.matchMedia(
